@@ -10,31 +10,32 @@ const Skills = () => (
 
     <div className="nine columns main-col">
       <p>
-        I make it my hobby to learn new technologies and tools as they surface,
-        but here is a short list of some skills I have the most experience with:
+        I make it my hobby to learn new frameworks and tools as they surface.
+        While I have many modern technologies in my toolbelt, here is a short
+        list of skills I have the most experience with:
       </p>
 
       <div className="bars">
         <ul className="skills">
           <li>
-            <span className="bar-expand html5-css3" />
-            <em>HTML5 & CSS3</em>
-          </li>
-          <li>
-            <span className="bar-expand illustrator" />
-            <em>Pure Javascript (including es6)</em>
-          </li>
-          <li>
-            <span className="bar-expand wordpress" />
+            <span className="bar-expand react" />
             <em>React.js</em>
           </li>
           <li>
-            <span className="bar-expand css" />
-            <em>Gulp</em>
+            <span className="bar-expand javascript" />
+            <em>Pure Javascript (including es6)</em>
           </li>
           <li>
-            <span className="bar-expand html5" />
-            <em>Webpack</em>
+            <span className="bar-expand html5-css3" />
+            <em>HTML5 &amp; CSS3</em>
+          </li>
+          <li>
+            <span className="bar-expand gulp-webpack" />
+            <em>Gulp / Webpack</em>
+          </li>
+          <li>
+            <span className="bar-expand foundation-bootstrap" />
+            <em>Zurb Foundation / Bootstrap</em>
           </li>
           <li>
             <span className="bar-expand nodejs" />

@@ -402,7 +402,7 @@ abbr:hover {
   margin: 0;
   padding: 14px 6px 0 0;
   font-size: 84px;
-  font-family: /* Copperplate */ 'opensans-bold', sans-serif;
+  font-family: 'opensans-bold', sans-serif;
   line-height: 60px;
   text-indent: 0;
   background: transparent;
@@ -423,7 +423,7 @@ a,
 a:visited {
   text-decoration: none;
   outline: 0;
-  color: #11abb0;
+  color: #ff6b6b;
 
   -webkit-transition: color 0.3s ease-in-out;
   -moz-transition: color 0.3s ease-in-out;
@@ -521,7 +521,7 @@ li p {
   color: #313131;
 }
 .stats-tabs li a:hover {
-  color: #11abb0;
+  color: #ff6b6b;
 }
 .stats-tabs li a b {
   display: block;
@@ -537,7 +537,7 @@ dl {
 }
 dt {
   margin: 0;
-  color: #11abb0;
+  color: #ff6b6b;
 }
 dd {
   margin: 0 0 0 20px;
@@ -615,7 +615,7 @@ dd {
 }
 .pagination .current,
 .pagination .current:hover {
-  background-color: #11abb0;
+  background-color: #ff6b6b;
   color: #fff;
 }
 .pagination .inactive,
@@ -649,7 +649,7 @@ input[type='submit'],
 input[type='reset'],
 input[type='button'] {
   font: 16px/30px 'opensans-bold', sans-serif;
-  background: #11abb0;
+  background: #ff6b6b;
   display: inline-block;
   text-decoration: none;
   letter-spacing: 0;
@@ -1274,7 +1274,7 @@ header .social li a {
   color: #fff;
 }
 header .social li a:hover {
-  color: #11abb0;
+  color: #ff6b6b;
 }
 
 /* scrolldown link */
@@ -1298,7 +1298,7 @@ header .scrolldown a {
   transition: all 0.3s ease-in-out;
 }
 header .scrolldown a:hover {
-  color: #11abb0;
+  color: #ff6b6b;
 }
 
 /* primary navigation
@@ -1389,7 +1389,7 @@ ul#nav li.current a {
 }
 #about a:hover,
 #about a:focus {
-  color: #11abb0;
+  color: #ff6b6b;
 }
 
 #about h2 {
@@ -1443,7 +1443,7 @@ ul#nav li.current a {
 
 #resume a,
 #resume a:visited {
-  color: #11abb0;
+  color: #ff6b6b;
 }
 #resume a:hover,
 #resume a:focus {
@@ -1456,7 +1456,7 @@ ul#nav li.current a {
   letter-spacing: 1px;
 }
 #resume h1 span {
-  border-bottom: 3px solid #11abb0;
+  border-bottom: 3px solid #ff6b6b;
   padding-bottom: 6px;
 }
 #resume h3 {
@@ -1534,34 +1534,34 @@ ul#nav li.current a {
 }
 
 .html5-css3 {
-  width: 95%;
+  width: 98%;
   -moz-animation: html5-css3 2s ease;
   -webkit-animation: html5-css3 2s ease;
 }
-.illustrator {
-  width: 55%;
-  -moz-animation: illustrator 2s ease;
-  -webkit-animation: illustrator 2s ease;
+.javascript {
+  width: 77%;
+  -moz-animation: javascript 2s ease;
+  -webkit-animation: javascript 2s ease;
 }
-.wordpress {
-  width: 50%;
-  -moz-animation: wordpress 2s ease;
-  -webkit-animation: wordpress 2s ease;
+.react {
+  width: 85%;
+  -moz-animation: react 2s ease;
+  -webkit-animation: react 2s ease;
 }
-.css {
+.gulp-webpack {
+  width: 67%;
+  -moz-animation: gulp-webpack 2s ease;
+  -webkit-animation: gulp-webpack 2s ease;
+}
+.foundation-bootstrap {
+  width: 92%;
+  -moz-animation: foundation-bootstrap 2s ease;
+  -webkit-animation: foundation-bootstrap 2s ease;
+}
+.nodejs {
   width: 90%;
-  -moz-animation: css 2s ease;
-  -webkit-animation: css 2s ease;
-}
-.html5 {
-  width: 80%;
-  -moz-animation: html5 2s ease;
-  -webkit-animation: html5 2s ease;
-}
-.jquery {
-  width: 50%;
-  -moz-animation: jquery 2s ease;
-  -webkit-animation: jquery 2s ease;
+  -moz-animation: nodejs 2s ease;
+  -webkit-animation: nodejs 2s ease;
 }
 
 @-moz-keyframes html5-css3 {
@@ -1572,7 +1572,7 @@ ul#nav li.current a {
     width: 95%;
   }
 }
-@-moz-keyframes illustrator {
+@-moz-keyframes javascript {
   0% {
     width: 0px;
   }
@@ -1580,7 +1580,7 @@ ul#nav li.current a {
     width: 55%;
   }
 }
-@-moz-keyframes wordpress {
+@-moz-keyframes react {
   0% {
     width: 0px;
   }
@@ -1588,7 +1588,7 @@ ul#nav li.current a {
     width: 50%;
   }
 }
-@-moz-keyframes css {
+@-moz-keyframes gulp-webpack {
   0% {
     width: 0px;
   }
@@ -1596,7 +1596,7 @@ ul#nav li.current a {
     width: 90%;
   }
 }
-@-moz-keyframes html5 {
+@-moz-keyframes foundation-bootstrap {
   0% {
     width: 0px;
   }
@@ -1604,7 +1604,7 @@ ul#nav li.current a {
     width: 80%;
   }
 }
-@-moz-keyframes jquery {
+@-moz-keyframes nodejs {
   0% {
     width: 0px;
   }
@@ -2100,7 +2100,7 @@ call-to-action .button {
 
 #contact a,
 #contact a:visited {
-  color: #11abb0;
+  color: #ff6b6b;
 }
 #contact a:hover,
 #contact a:focus {
@@ -2170,7 +2170,7 @@ call-to-action .button {
 #contact textarea:focus,
 #contact select:focus {
   color: #fff;
-  background-color: #11abb0;
+  background-color: #ff6b6b;
 }
 #contact button.submit {
   text-transform: uppercase;
@@ -2189,7 +2189,7 @@ call-to-action .button {
   background: #fff;
 }
 #contact span.required {
-  color: #11abb0;
+  color: #ff6b6b;
   font-size: 13px;
 }
 #message-warning,
@@ -2205,7 +2205,7 @@ call-to-action .button {
   color: #d72828;
 }
 #message-success {
-  color: #11abb0;
+  color: #ff6b6b;
 }
 
 #message-warning i,

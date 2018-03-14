@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Work = () => (
   <div className="row work">
@@ -11,11 +11,11 @@ const Work = () => (
     <div className="nine columns main-col">
       <div className="row item">
         <div className="twelve columns">
-          <h3>Awesome Design Studio</h3>
+          <h3>Net Media Group</h3>
           <p className="info">
-            Senior UX Designer
+            Frontend Web Developer
             <span>&bull;</span>
-            <em className="date">March 2010 - Present</em>
+            <em className="date">Dec 2013 - Present</em>
           </p>
 
           <p>
@@ -32,11 +32,11 @@ const Work = () => (
 
       <div className="row item">
         <div className="twelve columns">
-          <h3>Super Cool Studio</h3>
+          <h3>Net Media Group</h3>
           <p className="info">
-            UX Designer
+            Intern, Frontend Web Developer
             <span>&bull;</span>
-            <em className="date">March 2007 - February 2010</em>
+            <em className="date">Aug 2013 - Dec 2013</em>
           </p>
 
           <p>
