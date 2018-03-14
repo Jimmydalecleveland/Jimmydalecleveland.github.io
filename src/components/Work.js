@@ -66,6 +66,26 @@ const Work = () => (
           </p>
         </div>
       </div>
+
+      <div className="row item">
+        <div className="twelve columns">
+          <h3>United States Air Force</h3>
+          <p className="info">
+            Munitions Systems &amp; Safety Expert
+            <span>&bull;</span>
+            <em className="date">Jul 2004 &ndash; Jan 2009</em>
+          </p>
+
+          <p>
+            The military did not directly contribute to my development skills,
+            but it tought me self-discipline when following orders, and how to
+            lead. It is often an extremely stressful career, and a lot of
+            character development occurs during the consistant difficulties you
+            face. This made me well-equipped to deal with the challenges I've
+            faced in programming.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 );
