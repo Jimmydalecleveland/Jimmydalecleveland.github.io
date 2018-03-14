@@ -27,7 +27,7 @@ const Skills = () => (
           </li>
           <li>
             <span className="bar-expand html5-css3" />
-            <em>HTML5 &amp; CSS3</em>
+            <em>HTML5 &amp; CSS3 (including css grid &amp; flexbox)</em>
           </li>
           <li>
             <span className="bar-expand gulp-webpack" />
