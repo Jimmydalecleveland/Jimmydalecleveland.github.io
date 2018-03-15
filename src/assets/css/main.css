@@ -2346,6 +2346,11 @@ footer .social li:first-child {
 @media only screen and (max-width: 1024px) {
   /* header styles
  ------------------------------------------------------------------ */
+  header {
+    height: 100vh;
+    max-height: 800px;
+  }
+
   header .banner-text h1 {
     font: 80px/1.1em 'Josefin Slab', serif;
     letter-spacing: -1px;
@@ -2453,7 +2458,7 @@ footer .social li:first-child {
     width: 48px;
     height: 48px;
     text-align: left;
-    background-color: #cc5200;
+    background-color: #272d33;
     position: relative;
     border: none;
     float: right;
