@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Navigation = () => (
   <nav id="nav-wrap">
@@ -25,13 +25,12 @@ const Navigation = () => (
         </a>
       </li>
       <li>
-        <a className="smoothscroll" href="#testimonials">
-          Testimonials
-        </a>
-      </li>
-      <li>
-        <a className="smoothscroll" href="#footer">
-          Footer
+        <a
+          className="smoothscroll"
+          href="https://github.com/Jimmydalecleveland"
+          target="_blank"
+        >
+          Github
         </a>
       </li>
     </ul>

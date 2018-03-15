@@ -8,18 +8,7 @@ const Banner = () => (
       <h3>
         I do <span>frontend development</span>, with a preference for{' '}
         <span>Javascript</span>, <span>Node</span>, and <span>React</span>.
-        <a className="smoothscroll" href="#about">
-          {' '}
-          start scrolling
-        </a>{' '}
-        and learn more
-        <a className="smoothscroll" href="#about">
-          {' '}
-          about me
-        </a>.
       </h3>
-      <hr />
-      <SocialLinks />
     </div>
   </div>
 );
