@@ -23,7 +23,7 @@ const Skills = () => (
           </li>
           <li>
             <span className="bar-expand javascript" />
-            <em>Pure Javascript (including es6)</em>
+            <em>Javascript (including es6+)</em>
           </li>
           <li>
             <span className="bar-expand html5-css3" />

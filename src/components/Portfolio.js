@@ -1,20 +1,29 @@
-import React from "react";
-import { FaPlus, FaTag } from "react-icons/lib/fa";
+import React from 'react';
+import { FaExternalLink, FaTag } from 'react-icons/lib/fa';
 
-import Coffee from "../assets/images/portfolio/coffee.jpg";
-import Console from "../assets/images/portfolio/console.jpg";
-import Judah from "../assets/images/portfolio/judah.jpg";
-import IntoTheLight from "../assets/images/portfolio/into-the-light.jpg";
-import Farmerboy from "../assets/images/portfolio/farmerboy.jpg";
-import Girl from "../assets/images/portfolio/girl.jpg";
-import Origami from "../assets/images/portfolio/origami.jpg";
-import Retrocam from "../assets/images/portfolio/retrocam.jpg";
+import ladders from '../assets/images/portfolio/1800.jpg';
+import diamondBack from '../assets/images/portfolio/dbf.jpg';
+import forceUsa from '../assets/images/portfolio/force.jpg';
+import ssg from '../assets/images/portfolio/ssg.jpg';
+import lgl from '../assets/images/portfolio/lgl.jpg';
+import lgx from '../assets/images/portfolio/lgx.jpg';
+import shopifyXsells from '../assets/images/portfolio/shopify.jpg';
+import silkn from '../assets/images/portfolio/silkn.jpg';
+
+import Coffee from '../assets/images/portfolio/coffee.jpg';
+import Console from '../assets/images/portfolio/console.jpg';
+import Judah from '../assets/images/portfolio/judah.jpg';
+import IntoTheLight from '../assets/images/portfolio/into-the-light.jpg';
+import Farmerboy from '../assets/images/portfolio/farmerboy.jpg';
+import Girl from '../assets/images/portfolio/girl.jpg';
+import Origami from '../assets/images/portfolio/origami.jpg';
+import Retrocam from '../assets/images/portfolio/retrocam.jpg';
 
 const Portfolio = () => (
   <section id="portfolio">
     <div className="row">
       <div className="twelve columns collapsed">
-        <h1>Check Out Some of My Works.</h1>
+        <h1>Here are some sites I helped build.</h1>
 
         <div
           id="portfolio-wrapper"
@@ -22,16 +31,16 @@ const Portfolio = () => (
         >
           <div className="columns portfolio-item">
             <div className="item-wrap">
-              <a href="#modal-01" title="">
-                <img alt="" src={Coffee} />
+              <a href="https://www.1800ladders.com/" target="_blank">
+                <img alt="" src={ladders} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
-                    <h5>Coffee</h5>
-                    <p>Illustrration</p>
+                    <h5>1800Ladders</h5>
+                    <p>Ruby on Rails v4, React, Foundation</p>
                   </div>
                 </div>
                 <div className="link-icon">
-                  <FaPlus />
+                  <FaExternalLink />
                 </div>
               </a>
             </div>
@@ -39,16 +48,16 @@ const Portfolio = () => (
 
           <div className="columns portfolio-item">
             <div className="item-wrap">
-              <a href="#modal-02" title="">
-                <img alt="" src={Console} />
+              <a href="https://www.forceusa.com/" target="_blank">
+                <img alt="" src={forceUsa} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
-                    <h5>Console</h5>
-                    <p>Web Development</p>
+                    <h5>Force USA</h5>
+                    <p>Shopify (Slate build tool), React, Liquid, Sass</p>
                   </div>
                 </div>
                 <div className="link-icon">
-                  <FaPlus />
+                  <FaExternalLink />
                 </div>
               </a>
             </div>
@@ -56,16 +65,16 @@ const Portfolio = () => (
 
           <div className="columns portfolio-item">
             <div className="item-wrap">
-              <a href="#modal-03" title="">
-                <img alt="" src={Judah} />
+              <a href="https://www.diamondbackfitness.com/" target="_blank">
+                <img alt="" src={diamondBack} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
-                    <h5>Judah</h5>
-                    <p>Webdesign</p>
+                    <h5>DiamondBack Fitness</h5>
+                    <p>Ruby on Rails v5, Foundation, Haml, Sass</p>
                   </div>
                 </div>
                 <div className="link-icon">
-                  <FaPlus />
+                  <FaExternalLink />
                 </div>
               </a>
             </div>
@@ -73,16 +82,16 @@ const Portfolio = () => (
 
           <div className="columns portfolio-item">
             <div className="item-wrap">
-              <a href="#modal-04" title="">
-                <img alt="" src={IntoTheLight} />
+              <a href="https://www.sizzlingsausagegrill.com/" target="_blank">
+                <img alt="" src={ssg} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
-                    <h5>Into The Light</h5>
-                    <p>Photography</p>
+                    <h5>Johnsonville &ndash; Sizzling Sausage Grill</h5>
+                    <p>Ruby on Rails v4, Haml, Sass</p>
                   </div>
                 </div>
                 <div className="link-icon">
-                  <FaPlus />
+                  <FaExternalLink />
                 </div>
               </a>
             </div>
@@ -90,16 +99,19 @@ const Portfolio = () => (
 
           <div className="columns portfolio-item">
             <div className="item-wrap">
-              <a href="#modal-05" title="">
-                <img alt="" src={Farmerboy} />
+              <a href="https://www.littlegiantladder.com/" target="_blank">
+                <img alt="" src={lgl} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
-                    <h5>Farmer Boy</h5>
-                    <p>Branding</p>
+                    <h5>Little Giant Ladder</h5>
+                    <p>
+                      Shopify (upgraded &amp; ported from Magento), React,
+                      Liquid, Stylus
+                    </p>
                   </div>
                 </div>
                 <div className="link-icon">
-                  <FaPlus />
+                  <FaExternalLink />
                 </div>
               </a>
             </div>
@@ -107,16 +119,16 @@ const Portfolio = () => (
 
           <div className="columns portfolio-item">
             <div className="item-wrap">
-              <a href="#modal-06" title="">
-                <img alt="" src={Girl} />
+              <a href="https://www.littlegiantxtreme.com/" target="_blank">
+                <img alt="" src={lgx} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
-                    <h5>Girl</h5>
-                    <p>Photography</p>
+                    <h5>Little Giant Xtreme</h5>
+                    <p>Gulp static site, React, Sass</p>
                   </div>
                 </div>
                 <div className="link-icon">
-                  <FaPlus />
+                  <FaExternalLink />
                 </div>
               </a>
             </div>
@@ -125,15 +137,15 @@ const Portfolio = () => (
           <div className="columns portfolio-item">
             <div className="item-wrap">
               <a href="#modal-07" title="">
-                <img alt="" src={Origami} />
+                <img alt="" src={silkn} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
-                    <h5>Origami</h5>
-                    <p>Illustrration</p>
+                    <h5>Silk'n (no longer live)</h5>
+                    <p>Ruby on Rails v4, Foundation, Sass</p>
                   </div>
                 </div>
                 <div className="link-icon">
-                  <FaPlus />
+                  <FaExternalLink />
                 </div>
               </a>
             </div>
@@ -142,221 +154,21 @@ const Portfolio = () => (
           <div className="columns portfolio-item">
             <div className="item-wrap">
               <a href="#modal-08" title="">
-                <img alt="" src={Retrocam} />
+                <img alt="" src={shopifyXsells} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
-                    <h5>Retrocam</h5>
-                    <p>Web Development</p>
+                    <h5>Shopify Cross-sells app for LGL</h5>
+                    <p>Shopify API, React, Redux, Express, Shopify Polaris</p>
                   </div>
                 </div>
                 <div className="link-icon">
-                  <FaPlus />
+                  <FaExternalLink />
                 </div>
               </a>
             </div>
           </div>
         </div>
       </div>
-
-      {/* <div id="modal-01" className="popup-modal mfp-hide">
-        <img
-          className="scale-with-grid"
-          src="images/portfolio/modals/m-coffee.jpg"
-          alt=""
-        />
-
-        <div className="description-box">
-          <h4>Coffee Cup</h4>
-          <p>
-            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-            lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-            sem nibh id elit.
-          </p>
-          <span className="categories">
-            <FaTag /> Branding, Webdesign
-          </span>
-        </div>
-
-        <div className="link-box">
-          <a href="http://www.behance.net">Details</a>
-          <a className="popup-modal-dismiss">Close</a>
-        </div>
-      </div>
-
-      <div id="modal-02" className="popup-modal mfp-hide">
-        <img
-          className="scale-with-grid"
-          src="images/portfolio/modals/m-console.jpg"
-          alt=""
-        />
-
-        <div className="description-box">
-          <h4>Console</h4>
-          <p>
-            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-            lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-            sem nibh id elit.
-          </p>
-          <span className="categories">
-            <FaTag />Branding, Web Development
-          </span>
-        </div>
-
-        <div className="link-box">
-          <a href="http://www.behance.net">Details</a>
-          <a className="popup-modal-dismiss">Close</a>
-        </div>
-      </div>
-
-      <div id="modal-03" className="popup-modal mfp-hide">
-        <img
-          className="scale-with-grid"
-          src="images/portfolio/modals/m-judah.jpg"
-          alt=""
-        />
-
-        <div className="description-box">
-          <h4>Judah</h4>
-          <p>
-            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-            lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-            sem nibh id elit.
-          </p>
-          <span className="categories">
-            <FaTag />Branding
-          </span>
-        </div>
-
-        <div className="link-box">
-          <a href="http://www.behance.net">Details</a>
-          <a className="popup-modal-dismiss">Close</a>
-        </div>
-      </div>
-
-      <div id="modal-04" className="popup-modal mfp-hide">
-        <img
-          className="scale-with-grid"
-          src="images/portfolio/modals/m-intothelight.jpg"
-          alt=""
-        />
-
-        <div className="description-box">
-          <h4>Into the Light</h4>
-          <p>
-            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-            lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-            sem nibh id elit.
-          </p>
-          <span className="categories">
-            <FaTag />Photography
-          </span>
-        </div>
-
-        <div className="link-box">
-          <a href="http://www.behance.net">Details</a>
-          <a className="popup-modal-dismiss">Close</a>
-        </div>
-      </div>
-
-      <div id="modal-05" className="popup-modal mfp-hide">
-        <img
-          className="scale-with-grid"
-          src="images/portfolio/modals/m-farmerboy.jpg"
-          alt=""
-        />
-
-        <div className="description-box">
-          <h4>Farmer Boy</h4>
-          <p>
-            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-            lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-            sem nibh id elit.
-          </p>
-          <span className="categories">
-            <FaTag />Branding, Webdesign
-          </span>
-        </div>
-
-        <div className="link-box">
-          <a href="http://www.behance.net">Details</a>
-          <a className="popup-modal-dismiss">Close</a>
-        </div>
-      </div>
-
-      <div id="modal-06" className="popup-modal mfp-hide">
-        <img
-          className="scale-with-grid"
-          src="images/portfolio/modals/m-girl.jpg"
-          alt=""
-        />
-
-        <div className="description-box">
-          <h4>Girl</h4>
-          <p>
-            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-            lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-            sem nibh id elit.
-          </p>
-          <span className="categories">
-            <FaTag />Photography
-          </span>
-        </div>
-
-        <div className="link-box">
-          <a href="http://www.behance.net">Details</a>
-          <a className="popup-modal-dismiss">Close</a>
-        </div>
-      </div>
-
-      <div id="modal-07" className="popup-modal mfp-hide">
-        <img
-          className="scale-with-grid"
-          src="images/portfolio/modals/m-origami.jpg"
-          alt=""
-        />
-
-        <div className="description-box">
-          <h4>Origami</h4>
-          <p>
-            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-            lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-            sem nibh id elit.
-          </p>
-          <span className="categories">
-            <FaTag />Branding, Illustration
-          </span>
-        </div>
-
-        <div className="link-box">
-          <a href="http://www.behance.net">Details</a>
-          <a className="popup-modal-dismiss">Close</a>
-        </div>
-      </div>
-
-      <div id="modal-08" className="popup-modal mfp-hide">
-        <img
-          className="scale-with-grid"
-          src="images/portfolio/modals/m-retrocam.jpg"
-          alt=""
-        />
-
-        <div className="description-box">
-          <h4>Retrocam</h4>
-          <p>
-            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-            lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-            sem nibh id elit.
-          </p>
-          <span className="categories">
-            <i className="fa fa-tag" />Webdesign, Photography
-          </span>
-        </div>
-
-        <div className="link-box">
-          <a href="http://www.behance.net">Details</a>
-          <a className="popup-modal-dismiss">Close</a>
-        </div>
-      </div> */}
     </div>
   </section>
 );

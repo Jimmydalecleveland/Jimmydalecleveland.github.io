@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  FaLinkedin,
-  FaGithub,
-  FaGooglePlus,
-  FaInstagram,
-  FaTwitter,
-} from 'react-icons/lib/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/lib/fa';
 // https://gorangajic.github.io/react-icons/fa.html
 
 const SocialLinks = () => (
