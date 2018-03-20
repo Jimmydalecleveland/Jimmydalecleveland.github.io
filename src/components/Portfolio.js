@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaExternalLink, FaTag } from 'react-icons/lib/fa';
+import Link from 'gatsby-link';
+import { FaExternalLink, FaTag, FaArrowCircleRight } from 'react-icons/lib/fa';
 
 import ladders from '../assets/images/portfolio/1800.jpg';
 import diamondBack from '../assets/images/portfolio/dbf.jpg';
@@ -24,6 +25,10 @@ const Portfolio = () => (
     <div className="row">
       <div className="twelve columns collapsed">
         <h1>Here are some sites I helped build.</h1>
+        <h2>
+          The Github Repositories do not belong to me and are private, so I have
+          linked to the website or a page where I show my code if possible.
+        </h2>
 
         <div
           id="portfolio-wrapper"
@@ -153,7 +158,7 @@ const Portfolio = () => (
 
           <div className="columns portfolio-item">
             <div className="item-wrap">
-              <a href="#modal-08" title="">
+              <Link to="/shopify-cross-sells-app">
                 <img alt="" src={shopifyXsells} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
@@ -162,9 +167,9 @@ const Portfolio = () => (
                   </div>
                 </div>
                 <div className="link-icon">
-                  <FaExternalLink />
+                  <FaArrowCircleRight />
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

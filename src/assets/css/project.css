@@ -1,0 +1,49 @@
+.project-section {
+  padding: 4rem 0;
+  background-color: #f2f2f2;
+}
+
+.project-section-top {
+  background-color: #fff;
+}
+
+.project-section h1 {
+  margin: 2rem 0 2rem;
+  font-family: 'Josefin Sans', 'Open Sans', sans-serif;
+}
+
+.project-section h2 {
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.project-section span {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.tag {
+  display: inline-block;
+  margin: 0 4px;
+  padding: 0.2em 0.6em;
+  line-height: 1.2;
+  background-color: #273647;
+  color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.pre-code-explanation {
+  margin: 4rem 0 1rem;
+}
+
+.short-code {
+  padding: 0.2em 0.3em;
+  background-color: #f0e1e1;
+  border-radius: 3px;
+  color: #ff3e3e;
+}
+
+.closing-para {
+  margin-top: 6rem;
+}

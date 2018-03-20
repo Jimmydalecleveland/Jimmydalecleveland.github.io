@@ -33,11 +33,6 @@ const About = () => (
             <p className="address">
               <span>Jimmy Cleveland</span>
               <br />
-              <span>
-                5376 South 300 West
-                <br /> Ogden, UT 84405
-              </span>
-              <br />
               <span>(801)452-3265</span>
               <br />
               <span>jimmydalecleveland@gmail.com</span>
