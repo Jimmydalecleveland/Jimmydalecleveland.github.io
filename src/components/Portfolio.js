@@ -11,15 +11,6 @@ import lgx from '../assets/images/portfolio/lgx.jpg';
 import shopifyXsells from '../assets/images/portfolio/shopify.jpg';
 import silkn from '../assets/images/portfolio/silkn.jpg';
 
-import Coffee from '../assets/images/portfolio/coffee.jpg';
-import Console from '../assets/images/portfolio/console.jpg';
-import Judah from '../assets/images/portfolio/judah.jpg';
-import IntoTheLight from '../assets/images/portfolio/into-the-light.jpg';
-import Farmerboy from '../assets/images/portfolio/farmerboy.jpg';
-import Girl from '../assets/images/portfolio/girl.jpg';
-import Origami from '../assets/images/portfolio/origami.jpg';
-import Retrocam from '../assets/images/portfolio/retrocam.jpg';
-
 const Portfolio = () => (
   <section id="portfolio">
     <div className="row">

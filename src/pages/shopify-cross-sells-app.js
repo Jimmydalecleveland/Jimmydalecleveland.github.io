@@ -2,281 +2,18 @@ import React, { Component } from 'react';
 import Link from 'gatsby-link';
 import Footer from '../components/Footer';
 
+import introImage from './../assets/images/portfolio/shopify-intro.jpg';
+import {
+  productActions,
+  productsReducer,
+  xSellActions,
+  xSellsReducer,
+  productsList,
+} from './../utils/cross-sells-snippets';
+
 import './../assets/css/project.css';
 import './../vendor/prism.js';
 import './../vendor/prism.css';
-
-const reducerIndex = `
-import { combineReducers } from 'redux';
-import products from './productsReducer';
-import xSells from './xSellsReducer';
-
-export default combineReducers({
-  products,
-  xSells,
-});
-`;
-
-const productsReducer = `
-const initState = {
-  products: [],
-  fetching: false,
-  error: null
-}
-
-export default function(state = initState, action) {
-  switch(action.type) {
-    case 'FETCH_PRODUCTS_START':
-      return {
-        ...state,
-        fetching: true,
-        error: null
-      }
-    case 'FETCH_PRODUCTS_COMPLETE':
-      return {
-        ...state,
-        fetching: false,
-        error: null,
-        products: [...action.payload.products]
-      }
-    case 'FETCH_PRODUCTS_ERROR':
-      return {
-        ...state,
-        fetching: false,
-        error: action.payload
-      }
-    default:
-      return state;
-  }
-}
-`;
-
-const xSellsReducer = `
-const initState = {
-  xSells: {},
-  fetching: false,
-  error: null,
-}
-
-export default function(state = initState, action) {
-  switch(action.type) {
-    case 'FETCH_XSELLS_START':
-      return {
-        ...state,
-        fetching: true,
-        error: null,
-      }
-    case 'FETCH_XSELLS_COMPLETE':
-      const product = action.payload.productId;
-      const data = action.payload.xSells.metafields[0];
-
-      // parse the value we get back and create a new xSell object
-      const xSells = { metaId: data.id, value: JSON.parse(data.value) }
-
-      // [product] is needed to compute the value rather than
-      // the word, for the object key
-      return {
-        ...state,
-        fetching: false,
-        error: null,
-        xSells: {...state.xSells, [product]: xSells},
-      }
-    case 'FETCH_ALL_XSELLS_START':
-      // ...
-    case 'FETCH_ALL_XSELLS_COMPLETE':
-      // ...
-    case 'FETCH_XSELLS_ERROR':
-      // ...
-    case 'POST_XSELL_START':
-      // ...
-    case 'POST_XSELL_COMPLETE':
-      return {
-        ...state,
-        fetching: false,
-        error: null,
-        xSells: {
-          ...state.xSells,
-          [action.payload.productId]: [action.payload.xSells.metafield]
-        },
-      }
-    case 'POST_XSELL_ERROR':
-      // ...
-    default:
-      return state;
-  }
-};
-`;
-
-const productActions = `
-export function fetchProducts() {
-  const fetchOptions = {
-    method: 'GET',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    credentials: 'include',
-  }
-
-  return (dispatch) => {
-    dispatch({ type: 'FETCH_PRODUCTS_START' });
-
-    fetch('/api/products.json', fetchOptions)
-      .then((res) => res.json())
-      .then((json) => dispatch({ type: 'FETCH_PRODUCTS_COMPLETE', payload: json }))
-      .catch((error) => dispatch({ type: 'FETCH_PRODUCTS_ERROR', payload: error }))
-    ;
-  }
-}
-`;
-
-const xSellActions = `
-/* Fetch Option Object
--------------------------------------------------- */
-const fetchOptions = {
-  method: 'GET',
-  headers: {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json'
-  },
-  credentials: 'include',
-}
-
-
-/* Exported Functions
--------------------------------------------------- */
-
-//==  Fetch Cross-sells for a single product  ==
-export function fetchXSells(productId) {
-  fetchOptions.method = 'GET';
-  fetchOptions.body = null;
-
-  return function(dispatch) {
-    // Fetch begins, set 'fetching' to true and reset 'error' to null
-    dispatch({ type: 'FETCH_XSELLS_START' });
-
-    fetch(\`/api/products/\${productId}/metafields.json?namespace=xsells\`, fetchOptions)
-      .then((res) => res.json())
-      .then((json) => dispatch({ 
-        type: 'FETCH_XSELLS_COMPLETE',
-        payload: { productId: productId, xSells: json }
-      }))
-      .catch((error) => dispatch({ type: 'FETCH_XSELLS_ERROR', payload: error}))
-    ;
-  }
-}
-
-//==  Fetch Cross-sells for all products  ==
-export function fetchAllXSells(productIds) {
-  fetchOptions.method = 'GET';
-  fetchOptions.body = null;
-
-  // All variables inside this function in order to access 'dispatch'
-  return function(dispatch) {
-    const allXSells = {};
-
-    // callback function Promise.all maps over to build a fresh xSells Object
-    const getContent = (productId) => {
-      return fetch(\`/api/products/\${productId}/metafields.json?namespace=xsells\`, fetchOptions)
-        .then((res) => res.json())
-        .then((json) => {
-          // no metafields for 'xsells' namespace
-          let xSells = { metaId: '', value: [] };
-          if (json.metafields.length) {
-            // 'xsells' namespace fetch ensures it is the only data returned
-            const data = json.metafields[0];
-            xSells.metaId = data.id;
-            xSells.value = JSON.parse(data.value);
-          }
-          allXSells[productId] = xSells;
-        })
-        .catch((error) => dispatch({ type: 'FETCH_XSELLS_ERROR', payload: error}))
-      ;
-    }
-
-    // Fetch begins, set 'fetching' to true and reset 'error' to null
-    dispatch({ type: 'FETCH_ALL_XSELLS_START' });
-
-    // Queue up all fetches and fire a single dispatch with the completed
-    // xSells Object
-    Promise.all(productIds.map(getContent))
-      .then(() => dispatch({ type: 'FETCH_ALL_XSELLS_COMPLETE', payload: allXSells }))
-    ;
-  }
-}
-
-//==  POST a new Cross-sell for a product  ==
-export function postXSell(productId, selectValue) {
-  return function(dispatch) {
-    dispatch({ type: 'POST_XSELL_START' });
-
-    postRequest(productId, selectValue).then(() => {
-      dispatch(fetchXSells(productId));
-    })
-    .catch((err) => {
-      dispatch({ type: 'POST_XSELL_ERROR', payload: error });
-    });
-  }
-}
-
-//==  Delete a single Cross-sell for a product by the Cross-sell ID  ==
-export function deleteXSell(productId, newData, metaId) {
-  return function(dispatch) {
-    dispatch({ type: 'DELETE_XSELL_START' });
-
-    putRequest(productId, newData, metaId).then(() => {
-      dispatch(fetchXSells(productId));
-    })
-    .catch((err) => {
-      dispatch({ type: 'DELETE_XSELL_ERROR', payload: error })
-    });
-  }
-}
-
-
-/* Abstracted Request Functions
--------------------------------------------------- */
-
-// POST request
-function postRequest(productId, selectValue) {
-  const stringedValue = JSON.stringify(selectValue);
-
-  fetchOptions.method = 'POST';
-  fetchOptions.body = JSON.stringify({
-    metafield: {
-      namespace: "xsells",
-      key: "products",
-      value: stringedValue,
-      value_type: "string"
-    }
-  }, null, 2);
-
-  return fetch(\`/api/products/\${productId}/metafields.json\`, fetchOptions);
-}
-
-// DELETE request
-function deleteRequest(productId, metaId) {
-  fetchOptions.method = 'DELETE';
-
-  return fetch(\`/api/products/\${productId}/metafields/\${metaId}.json\`, fetchOptions);
-}
-
-// PUT request
-function putRequest(productId, newData, metaId) {
-  const stringedValue = JSON.stringify(newData);
-
-  fetchOptions.method = 'PUT';
-  fetchOptions.body = JSON.stringify({
-    metafield: {
-      id: metaId,
-      value: stringedValue,
-      value_type: "string"
-    }
-  }, null, 2);
-
-  return fetch(\`/api/products/\${productId}/metafields/\${metaId}.json\`, fetchOptions);
-}
-`;
 
 class Project extends Component {
   componentDidMount() {
@@ -300,6 +37,7 @@ class Project extends Component {
                 <span className="tag">Shopify Authentication</span>
                 <span className="tag">Shopify Metafields API fetching</span>
               </h2>
+              <img src={introImage} alt="" />
               <p>
                 When the Shopify port of{' '}
                 <a href="https://www.littlegiantladder.com/">
@@ -341,19 +79,11 @@ class Project extends Component {
             </div>
           </div>
         </div>
+
         <div className="project-section">
           <div className="row">
             <div className="twelve columns">
               <h3>Let's get to the code!</h3>
-              <p className="pre-code-explanation">
-                I decided I wanted at least 2 reducers instead of the default
-                single, so I added the typical{' '}
-                <span className="short-code">combineReducers</span> setup from
-                Redux.
-              </p>
-              <pre className="language-jsx">
-                <code className="language-jsx">{reducerIndex}</code>
-              </pre>
 
               <p className="pre-code-explanation">
                 It makes the most sense to start with the actions controller and
@@ -389,14 +119,45 @@ class Project extends Component {
               </pre>
 
               <p className="pre-code-explanation">
-                And here is the{' '}
-                <span className="short-code">xSellsReducer</span> ('crossSells'
-                was becoming a bit tedious in longer variables so I refactored
-                mid-way through). My <span className="short-code">xSells</span>{' '}
-                Object contains the <span className="short-code">xSell</span>{' '}
-                Metafield for every product in the store. When the app sends an
-                update to the Shopify API, it re-fetches the data and updates
-                the <span className="short-code">xSells</span> Object to stay
+                The <span className="short-code">xSellsActions</span> is a bit
+                more involved. I start by making an object of the fetch options
+                so I don't have to repeat them in every function (just need to
+                changed the method value appropriately). I create the following
+                functions: get cross-sells for a single product, get every
+                product's cross-sells, post a new cross-sell to a product, and
+                remove a cross-sell from a product.
+              </p>
+              <p>
+                <span className="short-code">Promise.all</span> came in very
+                handy in the <span className="short-code">fetchAllXSells</span>{' '}
+                function. In this function I'm mapping over all the product Ids
+                and calling the <span className="short-code">getContent</span>{' '}
+                function for each one.{' '}
+                <span className="short-code">getContent</span> performs a fetch,
+                checks if we got any back (simple adding blank values
+                otherwise), and stuffs the selected data into a giant object
+                full of every product's cross-sells. When every fetch is
+                finished, we can send off our dispatch so the reducer can update
+                our state with current{' '}
+                <span className="short-code">xSells</span> Object, and tell our
+                app it's done fetching.
+              </p>
+              <p>
+                I've also abstracted some functions to stringify/parse data,
+                update the fetch options, and return the appropriate fetch
+                promise.
+              </p>
+              <pre className="language-jsx">
+                <code className="language-jsx">{xSellActions}</code>
+              </pre>
+
+              <p className="pre-code-explanation">
+                This is the <span className="short-code">xSellsReducer</span>.
+                My <span className="short-code">xSells</span> Object contains
+                the <span className="short-code">xSell</span> Metafield for
+                every product in the store. When the app sends an update to the
+                Shopify API, it re-fetches the data and updates the{' '}
+                <span className="short-code">xSells</span> Object to stay
                 consistent.
               </p>
               <p>
@@ -422,10 +183,23 @@ class Project extends Component {
               </pre>
 
               <p className="pre-code-explanation">
-                <span className="short-code">xSellsActions</span>
+                On to the components. The{' '}
+                <span className="short-code">ProductsList</span> is topmost in
+                this App. It is responsible for dispatching the first fetch for
+                products, and then fetching every cross-sell after it updates.
+                In truth, I struggled to find the best practice for achieving
+                this. It works, but I'm not sure if using the didUpdate
+                lifecycle method is the best way.
+              </p>
+              <p>
+                There isn't much else to this component, other than looping over
+                each product to render a{' '}
+                <span className="short-code">ProductCard</span>, and passing it
+                a narrowed down Object for building the{' '}
+                <span className="short-code">select</span>.
               </p>
               <pre className="language-jsx">
-                <code className="language-jsx">{xSellActions}</code>
+                <code className="language-jsx">{productsList}</code>
               </pre>
 
               <h3 className="closing-para">In closing...</h3>
@@ -435,7 +209,10 @@ class Project extends Component {
                 project after it was production ready. It was a great learning
                 experience overall, and my supervisor was really excited for me
                 to share my learnings of Redux and Polaris, as he'd been wanting
-                to learn them himself for awhile.
+                to learn them himself for awhile. In the time since working on
+                this, I have learned some better ways of doing things, but I'm
+                always open to suggestions. If you see any flaws, feel free to
+                email me the improvements you would make.
               </p>
             </div>
           </div>

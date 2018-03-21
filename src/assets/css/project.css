@@ -7,6 +7,10 @@
   background-color: #fff;
 }
 
+.project-section-top img {
+  margin-bottom: 3rem;
+}
+
 .project-section h1 {
   margin: 2rem 0 2rem;
   font-family: 'Josefin Sans', 'Open Sans', sans-serif;
