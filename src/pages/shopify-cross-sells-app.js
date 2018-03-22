@@ -9,6 +9,7 @@ import {
   xSellActions,
   xSellsReducer,
   productsList,
+  xSells,
 } from './../utils/cross-sells-snippets';
 
 import './../assets/css/project.css';
@@ -46,7 +47,7 @@ class Project extends Component {
                 was launched, it was lacking the ability to show dynamic
                 cross-sells based on the products in the cart. My team knew from
                 experience that this was a big loss in conversion from many
-                previous tests and available data online. I knew we could edit
+                previous tests and available data online. I knew I could edit
                 each product's metafield data through the{' '}
                 <a href="https://help.shopify.com/api/reference/metafield">
                   Shopify Metafield API
@@ -55,26 +56,29 @@ class Project extends Component {
                 fullfilled by the existing apps on the Shopify App Store.
               </p>
               <p>
-                Shopify's metafield structure is more intended for attributes
-                that a product will only have one value per key, and I needed
-                one to many values per key. I also wanted an interface that was
-                clean and designed around the intended use for the other members
-                of my company to easily use maintain over a long period.
+                Shopify's metafield structure is intended for adding custom
+                attributes to a product using a single unique value per key, and
+                I needed one to many values per key. I also wanted an interface
+                that was clean and designed around the intended use for the
+                other members of my company to easily use and maintain over a
+                long period.
               </p>
               <p>
-                I was coming up on a holidy break, and I decided to use the long
-                weekend to learn Redux more fully, a skill I'd been intending to
-                polish for awhile but had been too busy. In the Shopify docs
-                there was a reference to 'shopify-node-app', a starter template
-                using Node, React, Redux, and Shopify's React styled components
-                library: Polaris. Perfect, exactly what I was looking for as a
-                starting point.
+                I was coming up on a holiday break, and I decided to use the
+                long weekend to write my first real-world Redux application. I'd
+                been looking for a proper use-case for Redux and this seemed
+                like it might fit. In the Shopify Apps documentation there was a
+                reference to 'shopify-node-app', a starter template using Node,
+                React, Redux, and Shopify's React styled components library:
+                Polaris. Perfect, exactly what I was looking for as a starting
+                point.
               </p>
               <p>
-                After I gone through several Redux guides as a refresher, and
-                combed through the templates code for any practices I didn't
-                know, I decided to strip out all of the starter Redux code and
-                write my own for a better understanding of what was going on.
+                After I had gone through several Redux guides as a refresher,
+                and combed through the template's code for any practices I
+                didn't know, I decided to strip out all of the starter Redux
+                code and write my own for a better understanding of what was
+                going on.
               </p>
             </div>
           </div>
@@ -86,14 +90,14 @@ class Project extends Component {
               <h3>Let's get to the code!</h3>
 
               <p className="pre-code-explanation">
-                It makes the most sense to start with the actions controller and
-                moving to it's associated reducer to me. Here is the final
-                product actions file. If you are unfamiliar with using{' '}
+                To me it makes the most sense to start with the actions
+                controller then move to its associated reducer. Here is the
+                final product actions file. If you are unfamiliar with using{' '}
                 <span className="short-code">dispatch</span> within a{' '}
                 <span className="short-code">dispatch</span>, it is the syntax
                 for using thunk middleware. A thunk wraps an expression to delay
-                it, particularly useful during an api request in which you need
-                to update your state when it completes.{' '}
+                it, which is particularly useful during an API request in which
+                you need to update your state when it completes.{' '}
                 <a href="https://github.com/gaearon/redux-thunk#composition">
                   Here
                 </a>{' '}
@@ -122,7 +126,7 @@ class Project extends Component {
                 The <span className="short-code">xSellsActions</span> is a bit
                 more involved. I start by making an object of the fetch options
                 so I don't have to repeat them in every function (just need to
-                changed the method value appropriately). I create the following
+                change the method value appropriately). I create the following
                 functions: get cross-sells for a single product, get every
                 product's cross-sells, post a new cross-sell to a product, and
                 remove a cross-sell from a product.
@@ -134,11 +138,11 @@ class Project extends Component {
                 and calling the <span className="short-code">getContent</span>{' '}
                 function for each one.{' '}
                 <span className="short-code">getContent</span> performs a fetch,
-                checks if we got any back (simple adding blank values
+                checks if we got any back (simply adding blank values
                 otherwise), and stuffs the selected data into a giant object
                 full of every product's cross-sells. When every fetch is
                 finished, we can send off our dispatch so the reducer can update
-                our state with current{' '}
+                our state with the current{' '}
                 <span className="short-code">xSells</span> Object, and tell our
                 app it's done fetching.
               </p>
@@ -165,7 +169,7 @@ class Project extends Component {
                 values for one metafield key, and they only accept primitives
                 for values. I ended up stringifying an object before sending it
                 to Shopify, which required me to be creative with how I'd render
-                that through liquid on the website. At this point I realized
+                that through Liquid on the website. At this point I realized
                 this was not going to be the simple, standard app I had
                 imagined.
               </p>
@@ -202,17 +206,40 @@ class Project extends Component {
                 <code className="language-jsx">{productsList}</code>
               </pre>
 
+              <p className="pre-code-explanation">
+                The last snippet I'll show is the{' '}
+                <span className="short-code">xSells</span> component. It is the
+                wrapper for each cross-sell line on a product, and contains the
+                method to delete it. Inside the{' '}
+                <span className="short-code">&lt;Card &gt;</span> element I'm
+                checking if there are cross-sells for the current product id,
+                and then checking the length of its value in case it has been
+                removed. This is because there is a difference between a product
+                having a specific metafield, but blank (because we are
+                stringifying an object we send), and no metafield at all.
+                Combining the <span className="short-code">&amp;&amp;</span>{' '}
+                check with a ternary operator isn't something I've seen anyone
+                do, so perhaps it's a bit clunky, but it suited my purpose.
+              </p>
+              <p>
+                All the uppercase named elements are from Shopify's Polaris
+                framework.
+              </p>
+              <pre className="language-jsx">
+                <code className="language-jsx">{xSells}</code>
+              </pre>
+
               <h3 className="closing-para">In closing...</h3>
               <p>
-                There were many more additions, and alterations I wanted to make
-                to this project, but I had deadline and I was needed for another
-                project after it was production ready. It was a great learning
-                experience overall, and my supervisor was really excited for me
-                to share my learnings of Redux and Polaris, as he'd been wanting
-                to learn them himself for awhile. In the time since working on
-                this, I have learned some better ways of doing things, but I'm
-                always open to suggestions. If you see any flaws, feel free to
-                email me the improvements you would make.
+                There were many more additions and alterations I wanted to make
+                to this project, but I had a deadline and I was needed for
+                another project after it was production ready. It was a great
+                learning experience overall, and my supervisor was really
+                excited for me to share my learnings of Redux and Polaris, as
+                he'd been wanting to learn them himself for awhile. In the time
+                since working on this, I have learned some better ways of doing
+                things, but I'm always open to suggestions. If you see any
+                flaws, feel free to email me the improvements you would make.
               </p>
             </div>
           </div>

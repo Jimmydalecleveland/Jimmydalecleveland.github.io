@@ -337,3 +337,71 @@ function mapStateToProps(state) {
 
 export default connect(mapStateToProps)(ProductsList);
 `;
+
+export const xSells = `
+class XSells extends Component {
+  constructor(props) {
+    super(props);
+    this.removeXSell = this.removeXSell.bind(this);
+  }
+
+  removeXSell(xSellId) {
+    const { product, dispatch, xSells } = this.props;
+
+    const metaId = xSells[product.id].metaId;
+    const productXSells = xSells[product.id].value;
+    const newData = _.filter(productXSells, (item) => item.id !== xSellId);
+
+    dispatch(deleteXSell(product.id, newData, metaId));
+  }
+
+  findProductTitle(productId) {
+    const { products } = this.props;
+    const productObj = _.find(products, (product) => product.id === productId);
+    return productObj.title;
+  }
+
+  findProductHandle(productId) {
+    const { products } = this.props;
+    const productObj = _.find(products, (product) => product.id === productId);
+    return productObj.handle;
+  }
+  
+  render() {
+    const { fetching, xSells, product } = this.props;
+
+    if (fetching) {
+      return <Spinner size="small" color="teal" />
+    } else {
+      return (
+        <Card>
+          { xSells[product.id] && xSells[product.id].value.length ?
+              xSells[product.id].value.map((xSell, i) => 
+                <Card.Section key={i}>
+                  <Stack >
+                    <Stack.Item fill>
+                      <p>{this.findProductTitle(xSell.id)}</p>
+                      <Caption>ID: {xSell.id}</Caption>
+                    </Stack.Item>
+                    <Stack.Item>
+                      <Button size="slim" icon="delete" destructive onClick={() => this.removeXSell(xSell.id)}>
+                      </Button>
+                    </Stack.Item>
+                  </Stack>
+                </Card.Section>)
+              : 
+              <p style={{padding: 10}}>No Cross-sells assigned to this product</p>
+          }
+          { xSells[product.id] && xSells[product.id].value.length > 3 &&
+            <Banner
+              title="Cross-sell limit exceeded"
+              status="warning">
+              <p>No more than 3 Cross-sells will show on the Cart page</p>
+            </Banner>
+          }
+        </Card>
+      )
+    }
+  }
+}
+`;

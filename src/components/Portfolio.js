@@ -27,6 +27,23 @@ const Portfolio = () => (
         >
           <div className="columns portfolio-item">
             <div className="item-wrap">
+              <Link to="/shopify-cross-sells-app">
+                <img alt="" src={shopifyXsells} />
+                <div className="overlay">
+                  <div className="portfolio-item-meta">
+                    <h5>Shopify Cross-sells app for LGL</h5>
+                    <p>Shopify API, React, Redux, Express, Shopify Polaris</p>
+                  </div>
+                </div>
+                <div className="link-icon">
+                  <FaArrowCircleRight />
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          <div className="columns portfolio-item">
+            <div className="item-wrap">
               <a href="https://www.1800ladders.com/" target="_blank">
                 <img alt="" src={ladders} />
                 <div className="overlay">
@@ -144,23 +161,6 @@ const Portfolio = () => (
                   <FaExternalLink />
                 </div>
               </a>
-            </div>
-          </div>
-
-          <div className="columns portfolio-item">
-            <div className="item-wrap">
-              <Link to="/shopify-cross-sells-app">
-                <img alt="" src={shopifyXsells} />
-                <div className="overlay">
-                  <div className="portfolio-item-meta">
-                    <h5>Shopify Cross-sells app for LGL</h5>
-                    <p>Shopify API, React, Redux, Express, Shopify Polaris</p>
-                  </div>
-                </div>
-                <div className="link-icon">
-                  <FaArrowCircleRight />
-                </div>
-              </Link>
             </div>
           </div>
         </div>
