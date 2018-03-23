@@ -149,7 +149,7 @@ const Portfolio = () => (
 
           <div className="columns portfolio-item">
             <div className="item-wrap">
-              <a href="#modal-07" title="">
+              <Link to="/silkn">
                 <img alt="" src={silkn} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
@@ -158,9 +158,9 @@ const Portfolio = () => (
                   </div>
                 </div>
                 <div className="link-icon">
-                  <FaExternalLink />
+                  <FaArrowCircleRight />
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
