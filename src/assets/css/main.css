@@ -1682,6 +1682,7 @@ ul#nav li.current a {
 
 #portfolio h2 {
   font: 14px/20px 'opensans-semibold', sans-serif;
+  text-align: center;
   margin-bottom: 4rem;
   color: #93a2b1;
 }
