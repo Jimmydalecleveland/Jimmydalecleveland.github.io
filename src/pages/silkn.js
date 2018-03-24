@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import Link from 'gatsby-link';
 import Footer from '../components/Footer';
 
-import introImage from './../assets/images/portfolio/shopify-intro.jpg';
+import homeResponsive from './../assets/images/portfolio/silkn-home-responsive.png';
+import revitTop from './../assets/images/portfolio/silkn-revit.jpg';
+import pediTop from './../assets/images/portfolio/silkn-pedi.jpg';
+import titanTop from './../assets/images/portfolio/silkn-titan.jpg';
+import flashResponsive from './../assets/images/portfolio/silkn-flash-responsive.png';
+import facefxTop from './../assets/images/portfolio/silkn-facefx.jpg';
+import checkout from './../assets/images/portfolio/silkn-checkout.jpg';
 
 import './../assets/css/project.css';
 import './../vendor/prism.js';
@@ -30,19 +36,21 @@ class Project extends Component {
                 <span className="tag">Gulp</span>
                 <span className="tag">Underscore.js</span>
               </h2>
-              <img src={introImage} alt="" />
-              <p>
-                Originally built on Magento around the time I started at Net
-                Media Group, Silk'n was one of my longest running and most
-                challenging projects. My team ended up porting it to Rails due
-                to the constant custom features that the client requested.
-                Magento made many of these asks very difficult and time
-                consuming to implement, and we were already familiar with Rails
-                from other projects. It also got a huge responsive overhaul from
-                me during the port, after I showed the rapidly growing mobile
-                traffic through Google Analytics. Mobile user percentage was as
-                high as 65% at one point.
-              </p>
+              <div className="row">
+                <p>
+                  Originally built on Magento around the time I started at Net
+                  Media Group, Silk'n was one of my longest running and most
+                  challenging projects. My team ended up porting it to Rails due
+                  to the constant custom features that the client requested.
+                  Magento made many of these asks very difficult and time
+                  consuming to implement, and we were already familiar with
+                  Rails from other projects. It also got a huge responsive
+                  overhaul from me during the port, after I showed the rapidly
+                  growing mobile traffic through Google Analytics. Mobile user
+                  percentage was as high as 65% at one point.
+                </p>
+                <img src={homeResponsive} alt="" />
+              </div>
             </div>
           </div>
         </div>
@@ -50,29 +58,34 @@ class Project extends Component {
         <div className="project-section">
           <div className="row">
             <div className="twelve columns">
-              <p className="pre-code-explanation">
-                To me it makes the most sense to start with the actions
-                controller then move to its associated reducer. Here is the
-                final product actions file. If you are unfamiliar with using{' '}
-                <span className="short-code">dispatch</span> within a{' '}
-                <span className="short-code">dispatch</span>, it is the syntax
-                for using thunk middleware. A thunk wraps an expression to delay
-                it, which is particularly useful during an API request in which
-                you need to update your state when it completes.{' '}
-                <a href="https://github.com/gaearon/redux-thunk#composition">
-                  Here
-                </a>{' '}
-                is a good explanation from the Github source.
-              </p>
+              <h3>Flash &amp; GO landing page, the Silk'n flagship product.</h3>
               <p>
-                It took me a good while to get my head around the concept
-                originally. I had a difficult time finding examples of Redux API
-                fetches (crazy, I know) so when I learned this was a common
-                practice for it I decided to give it a whirl.
+                <strong>
+                  Left to right demo sizes are Desktop, iPad, Galaxy S7.
+                </strong>{' '}
+                The page went through countless iterations and tests throughout
+                its life. There were many other models that came and went under
+                this product line. Our designer and I had to prove each time
+                that a narrowed down decision (in this case 2 models) was better
+                than too many options, which creates a decision overload and
+                higher bounce rate. We worked together to create different
+                design tests that we could A/B to show evidence for our claim,
+                and eventually won them over to make a more profitable page.
               </p>
-              <pre className="language-jsx">
-                <code className="language-jsx" />
-              </pre>
+              <img src={flashResponsive} alt="" />
+              <h3>FaceFX landing page</h3>
+              <img src={facefxTop} alt="" />
+              <h3>
+                Checkout - I had to build a new responsive cart &amp; checkout
+                for this site
+              </h3>
+              <img src={checkout} alt="" />
+              <h3>Pedi Pro landing page</h3>
+              <img src={pediTop} alt="" />
+              <h3>ReVit landing page</h3>
+              <img src={revitTop} alt="" />
+              <h3>Titan landing page</h3>
+              <img src={titanTop} alt="" />
             </div>
           </div>
         </div>

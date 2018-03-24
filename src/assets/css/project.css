@@ -7,8 +7,8 @@
   background-color: #fff;
 }
 
-.project-section-top img {
-  margin-bottom: 3rem;
+.project-section img {
+  margin-bottom: 4rem;
 }
 
 .project-section h1 {
@@ -25,6 +25,10 @@
 .project-section span {
   font-weight: normal;
   font-size: 14px;
+}
+
+.project-section strong {
+  font-weight: bold;
 }
 
 .tag {
