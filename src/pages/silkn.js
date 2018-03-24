@@ -37,19 +37,23 @@ class Project extends Component {
                 <span className="tag">Underscore.js</span>
               </h2>
               <div className="row">
-                <p>
-                  Originally built on Magento around the time I started at Net
-                  Media Group, Silk'n was one of my longest running and most
-                  challenging projects. My team ended up porting it to Rails due
-                  to the constant custom features that the client requested.
-                  Magento made many of these asks very difficult and time
-                  consuming to implement, and we were already familiar with
-                  Rails from other projects. It also got a huge responsive
-                  overhaul from me during the port, after I showed the rapidly
-                  growing mobile traffic through Google Analytics. Mobile user
-                  percentage was as high as 65% at one point.
-                </p>
-                <img src={homeResponsive} alt="" />
+                <div className="twelve columns">
+                  <p>
+                    Originally built on Magento around the time I started at Net
+                    Media Group, Silk'n was one of my longest running and most
+                    challenging projects. My team ended up porting it to Rails,
+                    with a redesign, due to the constant custom features that
+                    the client requested. Magento made many of these additions
+                    very difficult and time-consuming to implement, so we
+                    decided to build a ground-up site for future-proof
+                    flexibility. One of the largest updates was the responsive
+                    overhaul I proposed. I supported this proposal with data
+                    from Google Analytics that I had been compiling which showed
+                    rapidly increasing mobile traffic. Mobile user percentage
+                    was as high as 65% at one point after the redesign.
+                  </p>
+                  <img src={homeResponsive} alt="" />
+                </div>
               </div>
             </div>
           </div>
@@ -68,9 +72,10 @@ class Project extends Component {
                 this product line. Our designer and I had to prove each time
                 that a narrowed down decision (in this case 2 models) was better
                 than too many options, which creates a decision overload and
-                higher bounce rate. We worked together to create different
-                design tests that we could A/B to show evidence for our claim,
-                and eventually won them over to make a more profitable page.
+                higher bounce rate. We worked together to create several
+                different designs that we could A/B test to show evidence for
+                our claims, and eventually convinced the client, which resulted
+                in a more profitable page that everyone was happy with.
               </p>
               <img src={flashResponsive} alt="" />
               <h3>FaceFX landing page</h3>
