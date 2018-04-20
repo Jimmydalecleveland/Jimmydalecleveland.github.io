@@ -18,8 +18,6 @@
     "gatsby-transformer-remark": "^1.7.21",
     "gatsby-transformer-sharp": "^1.6.14",
     "react-icons": "2.2.7",
-    "react-slick": "0.16.0",
-    "slick-carousel": "1.8.1",
     "typography-theme-bootstrap": "0.16.7"
   },
   "keywords": [
