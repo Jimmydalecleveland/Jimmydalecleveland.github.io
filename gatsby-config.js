@@ -23,7 +23,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Josefin Slab`, `Josefin Sans`, `open sans`],
+        fonts: [`Josefin Sans\:400,700`, `open sans\:400,700`, `Josefin Slab`],
       },
     },
     {
