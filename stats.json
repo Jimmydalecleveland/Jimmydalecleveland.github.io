@@ -1,12 +1,12 @@
 {
   "assetsByChunkName": {
     "component---src-pages-shopify-cross-sells-app-js": [
-      "component---src-pages-shopify-cross-sells-app-js-6bc669b6fa040539ac1b.js",
-      "component---src-pages-shopify-cross-sells-app-js-6bc669b6fa040539ac1b.js.map"
+      "component---src-pages-shopify-cross-sells-app-js-5fdaf6d07662839fe78e.js",
+      "component---src-pages-shopify-cross-sells-app-js-5fdaf6d07662839fe78e.js.map"
     ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-3579c34dd95a3ca784d3.js",
-      "component---src-pages-index-js-3579c34dd95a3ca784d3.js.map"
+      "component---src-pages-index-js-402ca90b6a1641d24122.js",
+      "component---src-pages-index-js-402ca90b6a1641d24122.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -17,8 +17,8 @@
       "path---silkn-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-38366cf0d19febef7b39.js",
-      "component---src-layouts-index-js-38366cf0d19febef7b39.js.map"
+      "component---src-layouts-index-js-a0ee02a17bf8cbc1bf0e.js",
+      "component---src-layouts-index-js-a0ee02a17bf8cbc1bf0e.js.map"
     ],
     "path---index": [
       "path---index-a0e39f21c11f6a62c5ab.js",
@@ -39,8 +39,8 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-silkn-js": [
-      "component---src-pages-silkn-js-a77c76784db7671507a9.js",
-      "component---src-pages-silkn-js-a77c76784db7671507a9.js.map"
+      "component---src-pages-silkn-js-c8f8439b04cedb758307.js",
+      "component---src-pages-silkn-js-c8f8439b04cedb758307.js.map"
     ],
     "app": [
       "app-3226db0a91295b64d11d.js",
