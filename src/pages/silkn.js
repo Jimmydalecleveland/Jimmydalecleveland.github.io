@@ -52,7 +52,7 @@ class Project extends Component {
                     rapidly increasing mobile traffic. Mobile user percentage
                     was as high as 65% at one point after the redesign.
                   </p>
-                  <img src={homeResponsive} alt="" />
+                  <img className="lazyload" data-src={homeResponsive} alt="" />
                 </div>
               </div>
             </div>
@@ -77,20 +77,20 @@ class Project extends Component {
                 our claims, and eventually convinced the client, which resulted
                 in a more profitable page that everyone was happy with.
               </p>
-              <img src={flashResponsive} alt="" />
+              <img className="lazyload" data-src={flashResponsive} alt="" />
               <h3>FaceFX landing page</h3>
-              <img src={facefxTop} alt="" />
+              <img className="lazyload" data-src={facefxTop} alt="" />
               <h3>
                 Checkout - I had to build a new responsive cart &amp; checkout
                 for this site
               </h3>
-              <img src={checkout} alt="" />
+              <img className="lazyload" data-src={checkout} alt="" />
               <h3>Pedi Pro landing page</h3>
-              <img src={pediTop} alt="" />
+              <img className="lazyload" data-src={pediTop} alt="" />
               <h3>ReVit landing page</h3>
-              <img src={revitTop} alt="" />
+              <img className="lazyload" data-src={revitTop} alt="" />
               <h3>Titan landing page</h3>
-              <img src={titanTop} alt="" />
+              <img className="lazyload" data-src={titanTop} alt="" />
             </div>
           </div>
         </div>

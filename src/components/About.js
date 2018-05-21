@@ -8,7 +8,7 @@ const About = () => (
   <section id="about">
     <div className="row">
       <div className="three columns">
-        <img className="profile-pic" src={profilePic} alt="" />
+        <img className="profile-pic lazyload" data-src={profilePic} alt="" />
       </div>
       <div className="nine columns main-col">
         <h2>About Me</h2>

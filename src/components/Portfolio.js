@@ -28,7 +28,7 @@ const Portfolio = () => (
           <div className="columns portfolio-item">
             <div className="item-wrap">
               <Link to="/shopify-cross-sells-app">
-                <img alt="" src={shopifyXsells} />
+                <img alt="" className="lazyload" data-src={shopifyXsells} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
                     <h5>Shopify Cross-sells app for LGL</h5>
@@ -49,7 +49,7 @@ const Portfolio = () => (
                 target="_blank"
                 rel="noopener"
               >
-                <img alt="" src={ladders} />
+                <img alt="" className="lazyload" data-src={ladders} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
                     <h5>1800Ladders</h5>
@@ -70,7 +70,7 @@ const Portfolio = () => (
                 target="_blank"
                 rel="noopener"
               >
-                <img alt="" src={forceUsa} />
+                <img alt="" className="lazyload" data-src={forceUsa} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
                     <h5>Force USA</h5>
@@ -91,7 +91,7 @@ const Portfolio = () => (
                 target="_blank"
                 rel="noopener"
               >
-                <img alt="" src={diamondBack} />
+                <img alt="" className="lazyload" data-src={diamondBack} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
                     <h5>DiamondBack Fitness</h5>
@@ -112,7 +112,7 @@ const Portfolio = () => (
                 target="_blank"
                 rel="noopener"
               >
-                <img alt="" src={ssg} />
+                <img alt="" className="lazyload" data-src={ssg} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
                     <h5>Johnsonville &ndash; Sizzling Sausage Grill</h5>
@@ -133,7 +133,7 @@ const Portfolio = () => (
                 target="_blank"
                 rel="noopener"
               >
-                <img alt="" src={lgl} />
+                <img alt="" className="lazyload" data-src={lgl} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
                     <h5>Little Giant Ladder</h5>
@@ -157,7 +157,7 @@ const Portfolio = () => (
                 target="_blank"
                 rel="noopener"
               >
-                <img alt="" src={lgx} />
+                <img alt="" className="lazyload" data-src={lgx} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
                     <h5>Little Giant Xtreme</h5>
@@ -174,7 +174,7 @@ const Portfolio = () => (
           <div className="columns portfolio-item">
             <div className="item-wrap">
               <Link to="/silkn">
-                <img alt="" src={silkn} />
+                <img alt="" className="lazyload" data-src={silkn} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
                     <h5>Silk'n (no longer live)</h5>
