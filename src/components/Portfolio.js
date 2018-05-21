@@ -15,11 +15,11 @@ const Portfolio = () => (
   <section id="portfolio">
     <div className="row">
       <div className="twelve columns collapsed">
-        <h1>Here are some sites I helped build.</h1>
-        <h2>
+        <h3>Here are some sites I helped build.</h3>
+        <h4>
           The Github Repositories do not belong to me and are private, so I have
           linked to the website or a page where I show my code if possible.
-        </h2>
+        </h4>
 
         <div
           id="portfolio-wrapper"
@@ -44,7 +44,11 @@ const Portfolio = () => (
 
           <div className="columns portfolio-item">
             <div className="item-wrap">
-              <a href="https://www.1800ladders.com/" target="_blank">
+              <a
+                href="https://www.1800ladders.com/"
+                target="_blank"
+                rel="noopener"
+              >
                 <img alt="" src={ladders} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
@@ -61,7 +65,11 @@ const Portfolio = () => (
 
           <div className="columns portfolio-item">
             <div className="item-wrap">
-              <a href="https://www.forceusa.com/" target="_blank">
+              <a
+                href="https://www.forceusa.com/"
+                target="_blank"
+                rel="noopener"
+              >
                 <img alt="" src={forceUsa} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
@@ -78,7 +86,11 @@ const Portfolio = () => (
 
           <div className="columns portfolio-item">
             <div className="item-wrap">
-              <a href="https://www.diamondbackfitness.com/" target="_blank">
+              <a
+                href="https://www.diamondbackfitness.com/"
+                target="_blank"
+                rel="noopener"
+              >
                 <img alt="" src={diamondBack} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
@@ -95,7 +107,11 @@ const Portfolio = () => (
 
           <div className="columns portfolio-item">
             <div className="item-wrap">
-              <a href="https://www.sizzlingsausagegrill.com/" target="_blank">
+              <a
+                href="https://www.sizzlingsausagegrill.com/"
+                target="_blank"
+                rel="noopener"
+              >
                 <img alt="" src={ssg} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
@@ -112,7 +128,11 @@ const Portfolio = () => (
 
           <div className="columns portfolio-item">
             <div className="item-wrap">
-              <a href="https://www.littlegiantladder.com/" target="_blank">
+              <a
+                href="https://www.littlegiantladder.com/"
+                target="_blank"
+                rel="noopener"
+              >
                 <img alt="" src={lgl} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
@@ -132,7 +152,11 @@ const Portfolio = () => (
 
           <div className="columns portfolio-item">
             <div className="item-wrap">
-              <a href="https://www.littlegiantxtreme.com/" target="_blank">
+              <a
+                href="https://www.littlegiantxtreme.com/"
+                target="_blank"
+                rel="noopener"
+              >
                 <img alt="" src={lgx} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">

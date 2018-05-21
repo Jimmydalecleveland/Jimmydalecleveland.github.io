@@ -8,12 +8,17 @@ const SocialLinks = () => (
       <a
         href="https://www.linkedin.com/in/jimmy-cleveland-41625442/"
         target="_blank"
+        rel="noopener"
       >
         <FaLinkedin />
       </a>
     </li>
     <li>
-      <a href="https://github.com/Jimmydalecleveland" target="_blank">
+      <a
+        href="https://github.com/Jimmydalecleveland"
+        target="_blank"
+        rel="noopener"
+      >
         <FaGithub />
       </a>
     </li>

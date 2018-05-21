@@ -221,7 +221,7 @@ body {
   background: #fff;
   font-family: 'Open Sans', sans-serif;
   font-weight: normal;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 30px;
   color: #838c95;
   -webkit-font-smoothing: antialiased;
@@ -284,7 +284,7 @@ h5 {
 }
 
 h6 {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 30px;
 }
 
@@ -300,7 +300,7 @@ p img {
 }
 
 p.lead {
-  font: 19px/36px 'opensans-light', sans-serif;
+  font: 19px/36px 'Open Sans', sans-serif;
   margin-bottom: 18px;
 }
 
@@ -308,12 +308,12 @@ p.lead {
 the body tag due to rendering problems in some browsers */
 
 em {
-  font: 15px/30px 'opensans-italic', sans-serif;
+  font: 16px/30px 'Open Sans', sans-serif;
 }
 
 strong,
 b {
-  font: 15px/30px 'Open Sans', sans-serif;
+  font: 16px/30px 'Open Sans', sans-serif;
   font-weight: bold;
 }
 
@@ -431,7 +431,7 @@ abbr:hover {
 .drop-cap:first-letter {
   float: left;
   margin: 0;
-  padding: 14px 6px 0 0;
+  padding: 16px 6px 0 0;
   font-size: 84px;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
@@ -653,7 +653,7 @@ dd {
 }
 
 .pagination .page-numbers {
-  font: 15px/18px 'Open Sans', sans-serif;
+  font: 16px/18px 'Open Sans', sans-serif;
   font-weight: bold;
   display: inline-block;
   padding: 6px 10px;
@@ -792,14 +792,14 @@ input[type='email'],
 textarea,
 select {
   display: block;
-  padding: 18px 15px;
+  padding: 18px 16px;
   margin: 0 0 24px 0;
   border: 0;
   outline: none;
   vertical-align: middle;
   min-width: 225px;
   max-width: 100%;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 24px;
   color: #647373;
   background: #d3d9d9;
@@ -833,12 +833,12 @@ legend {
 label span,
 legend span {
   color: #8b9798;
-  font: 14px/24px 'Open Sans', sans-serif;
+  font: 16px/24px 'Open Sans', sans-serif;
 }
 
 input[type='checkbox'],
 input[type='radio'] {
-  font-size: 15px;
+  font-size: 16px;
   color: #737373;
 }
 
@@ -1424,7 +1424,7 @@ header .social {
 
 header .social li {
   display: inline-block;
-  margin: 0 15px;
+  margin: 0 16px;
   padding: 0;
 }
 
@@ -1601,7 +1601,7 @@ ul#nav li.current a {
 }
 
 #about .download .button i {
-  margin-right: 15px;
+  margin-right: 16px;
   font-size: 20px;
 }
 
@@ -1659,6 +1659,7 @@ ul#nav li.current a {
 
 #resume .info {
   color: #555;
+  font-weight: bold;
   margin-bottom: 18px;
   margin-top: 9px;
 }
@@ -1669,6 +1670,7 @@ ul#nav li.current a {
 }
 
 #resume .date {
+  font-style: italic;
   margin-top: 6px;
 }
 
@@ -1698,7 +1700,7 @@ ul#nav li.current a {
 }
 
 .bars li em {
-  font: 15px 'Open Sans', sans-serif;
+  font: 16px 'Open Sans', sans-serif;
   font-weight: bold;
   color: #272d33;
   text-transform: uppercase;
@@ -1728,19 +1730,19 @@ ul#nav li.current a {
 }
 
 .javascript {
-  width: 77%;
+  width: 85%;
   -moz-animation: javascript 2s ease;
   -webkit-animation: javascript 2s ease;
 }
 
 .react {
-  width: 85%;
+  width: 77%;
   -moz-animation: react 2s ease;
   -webkit-animation: react 2s ease;
 }
 
 .gulp-webpack {
-  width: 67%;
+  width: 79%;
   -moz-animation: gulp-webpack 2s ease;
   -webkit-animation: gulp-webpack 2s ease;
 }
@@ -1752,7 +1754,7 @@ ul#nav li.current a {
 }
 
 .nodejs {
-  width: 90%;
+  width: 68%;
   -moz-animation: nodejs 2s ease;
   -webkit-animation: nodejs 2s ease;
 }
@@ -1876,16 +1878,17 @@ ul#nav li.current a {
   padding-bottom: 60px;
 }
 
-#portfolio h1 {
-  font: 16px/24px 'opensans-semibold', sans-serif;
+#portfolio h3 {
+  font: 18px/26px 'Josefin Sans', sans-serif;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
   color: #272d33;
 }
 
-#portfolio h2 {
-  font: 14px/20px 'opensans-semibold', sans-serif;
+#portfolio h4 {
+  font: 16px/22px 'Open Sans', sans-serif;
   text-align: center;
   margin-bottom: 4rem;
   color: #93a2b1;
@@ -1949,8 +1952,8 @@ ul#nav li.current a {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-left: -15px;
-  margin-top: -15px;
+  margin-left: -16px;
+  margin-top: -16px;
 }
 
 .portfolio-item .item-wrap img {
@@ -1962,13 +1965,13 @@ ul#nav li.current a {
 }
 
 .portfolio-item .portfolio-item-meta h5 {
-  font: 14px/21px 'Open Sans', sans-serif;
+  font: 16px/21px 'Open Sans', sans-serif;
   font-weight: bold;
   color: #fff;
 }
 
 .portfolio-item .portfolio-item-meta p {
-  font: 12px/18px 'opensans-light', sans-serif;
+  font: 12px/18px 'Open Sans', sans-serif;
   color: #c6c7c7;
   margin-bottom: 0;
 }
@@ -1985,94 +1988,6 @@ ul#nav li.current a {
   opacity: 1;
   -moz-opacity: 1;
   filter: alpha(opacity=100);
-}
-
-/* popup modal */
-
-.popup-modal {
-  max-width: 550px;
-  background: #fff;
-  position: relative;
-  margin: 0 auto;
-}
-
-.popup-modal .description-box {
-  padding: 12px 36px 18px 36px;
-}
-
-.popup-modal .description-box h4 {
-  font: 15px/24px 'Open Sans', sans-serif;
-  font-weight: bold;
-  margin-bottom: 12px;
-  color: #111;
-}
-
-.popup-modal .description-box p {
-  font: 14px/24px 'Open Sans', sans-serif;
-  color: #a1a1a1;
-  margin-bottom: 12px;
-}
-
-.popup-modal .description-box .categories {
-  font: 11px/21px 'opensans-light', sans-serif;
-  color: #a1a1a1;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  display: block;
-  text-align: left;
-}
-
-.popup-modal .description-box .categories i {
-  margin-right: 8px;
-}
-
-.popup-modal .link-box {
-  padding: 18px 36px;
-  background: #111;
-  text-align: left;
-}
-
-.popup-modal .link-box a {
-  color: #fff;
-  font: 11px/21px 'Open Sans', sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  cursor: pointer;
-}
-
-.popup-modal a:hover {
-  color: #00cccc;
-}
-
-.popup-modal a.popup-modal-dismiss {
-  margin-left: 24px;
-}
-
-/* fadein/fadeout effect for modal popup
-/* ------------------------------------------------------------------ */
-
-/* content at start */
-
-.mfp-fade.mfp-wrap .mfp-content .popup-modal {
-  opacity: 0;
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  -ms-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-}
-
-/* content fadein */
-
-.mfp-fade.mfp-wrap.mfp-ready .mfp-content .popup-modal {
-  opacity: 1;
-}
-
-/* content fadeout */
-
-.mfp-fade.mfp-wrap.mfp-removing .mfp-content .popup-modal {
-  opacity: 0;
 }
 
 /* ------------------------------------------------------------------ */
@@ -2143,7 +2058,8 @@ call-to-action .button {
 }
 
 #call-to-action p span {
-  font-family: 'opensans-semibold', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
   color: #d8d8d8;
 }
 
@@ -2205,7 +2121,7 @@ call-to-action .button {
 }
 
 #contact p.lead {
-  font: 18px/36px 'opensans-light', sans-serif;
+  font: 18px/36px 'Open Sans', sans-serif;
   padding-right: 3%;
 }
 
@@ -2220,7 +2136,7 @@ call-to-action .button {
 }
 
 #contact label {
-  font: 15px/24px 'Open Sans', sans-serif;
+  font: 16px/24px 'Open Sans', sans-serif;
   font-weight: bold;
   margin: 12px 0;
   color: #ebeeee;
@@ -2238,7 +2154,7 @@ call-to-action .button {
   margin-bottom: 42px;
   border: 0;
   outline: none;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 24px;
   width: 65%;
 }
@@ -2334,7 +2250,7 @@ footer {
   padding-top: 48px;
   margin-bottom: 48px;
   color: #303030;
-  /* font-size: 14px; */
+  /* font-size: 16px; */
   text-align: center;
   position: relative;
 }
@@ -2484,8 +2400,8 @@ footer .social li:first-child {
   /* About Section
  ------------------------------------------------------------------- */
   #about .profile-pic {
-    width: 114px;
-    height: 114px;
+    width: 116px;
+    height: 116px;
     margin-left: 12px;
   }
   #about .contact-details {
@@ -2655,7 +2571,7 @@ footer .social li:first-child {
   #about .download .button {
     width: 100%;
     text-align: center;
-    padding: 15px 20px;
+    padding: 16px 20px;
   }
   #about .main-col {
     padding-right: 30px;
@@ -2699,7 +2615,7 @@ footer .social li:first-child {
     content: none;
   }
   #call-to-action p {
-    font-size: 15px;
+    font-size: 16px;
   }
   /* Portfolio Section
  /* ----------------------------------------------------------------- */
@@ -2850,6 +2766,6 @@ footer .social li:first-child {
     font-size: 20px;
   }
   footer .social li {
-    margin-left: 14px;
+    margin-left: 16px;
   }
 }
