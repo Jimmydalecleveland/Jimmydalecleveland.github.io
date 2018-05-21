@@ -3,11 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { siteMetadata } from '../../gatsby-config';
 import favicon from './../assets/favicon.ico';
-try {
-  import lazySizes from 'lazysizes';
-} catch (err) {
-  console.error(err);
-}
+import lazySizes from 'lazysizes';
 
 const TemplateWrapper = ({ children }) => (
   <div>
