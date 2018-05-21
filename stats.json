@@ -5,8 +5,8 @@
       "component---src-pages-shopify-cross-sells-app-js-c9b736cd14bb5a978ee5.js.map"
     ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-057abb91c9a420494bd5.js",
-      "component---src-pages-index-js-057abb91c9a420494bd5.js.map"
+      "component---src-pages-index-js-8a243ebc2a9439a0d4bd.js",
+      "component---src-pages-index-js-8a243ebc2a9439a0d4bd.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -17,8 +17,8 @@
       "path---silkn-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-1989fca47cadceb3cd90.js",
-      "component---src-layouts-index-js-1989fca47cadceb3cd90.js.map"
+      "component---src-layouts-index-js-b7382435fb9f715a885c.js",
+      "component---src-layouts-index-js-b7382435fb9f715a885c.js.map"
     ],
     "path---index": [
       "path---index-a0e39f21c11f6a62c5ab.js",
@@ -29,9 +29,9 @@
       "component---src-pages-404-js-e4907906e066f24433ac.js.map"
     ],
     "commons": [
-      "commons-bc5b09680848a6101a84.js",
+      "commons-c4c741337ccf87c32ab1.js",
       "build-js-styles.css",
-      "commons-bc5b09680848a6101a84.js.map",
+      "commons-c4c741337ccf87c32ab1.js.map",
       "build-js-styles.css.map"
     ],
     "path---404-html": [
@@ -43,9 +43,9 @@
       "component---src-pages-silkn-js-4dfcb8e5dbdeb4ecda4c.js.map"
     ],
     "app": [
-      "app-dcef889d024a459a9f90.js",
+      "app-3226db0a91295b64d11d.js",
       "build-js-styles.css",
-      "app-dcef889d024a459a9f90.js.map",
+      "app-3226db0a91295b64d11d.js.map",
       "build-js-styles.css.map"
     ],
     "path---shopify-cross-sells-app": [
