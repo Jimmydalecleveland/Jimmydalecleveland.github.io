@@ -9,6 +9,7 @@ const SocialLinks = () => (
         href="https://www.linkedin.com/in/jimmy-cleveland-41625442/"
         target="_blank"
         rel="noopener"
+        aria-label="See my linkedIn page"
       >
         <FaLinkedin />
       </a>
@@ -18,6 +19,7 @@ const SocialLinks = () => (
         href="https://github.com/Jimmydalecleveland"
         target="_blank"
         rel="noopener"
+        aria-label="See my Github Profile"
       >
         <FaGithub />
       </a>

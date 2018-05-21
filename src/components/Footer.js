@@ -15,7 +15,11 @@ const Footer = () => (
       </div>
 
       <div id="go-top">
-        <a title="Back to Top" href="#home">
+        <a
+          title="Back to Top"
+          href="#home"
+          aria-label="Go back to the top of this page"
+        >
           <FaChevronCircleUp />
         </a>
       </div>

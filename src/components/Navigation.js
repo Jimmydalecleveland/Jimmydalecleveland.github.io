@@ -3,7 +3,7 @@ import smoothscroll from 'smoothscroll';
 
 const Navigation = () => (
   <nav id="nav-wrap">
-    <a className="mobile-btn" href="#nav-wrap" />
+    <a className="mobile-btn" href="#nav-wrap" aria-label="Open mobile menu." />
     <ul id="nav" className="nav">
       <li className="current">
         <a href="#home">Home</a>
