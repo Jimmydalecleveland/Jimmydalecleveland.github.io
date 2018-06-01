@@ -13,7 +13,7 @@ const TemplateWrapper = ({ children }) => (
       <meta name="author" description={siteMetadata.author} />
       <meta
         property="og:title"
-        content="Jimmy Cleveland's Developer Portfolio"
+        content="Jimmy Cleveland - Front-end Developer"
       />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="http://jimmydc.com/" />
