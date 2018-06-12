@@ -1,0 +1,17 @@
+[[redirects]]
+  from = "https://jimmydc.netlify.com/*"
+  to = "https://www.jimmydc.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://jimmydc.netlify.com/*"
+  to = "https://www.jimmydc.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.jimmydc.com/*"
+  to = "https://www.jimmydc.com/:splat"
+  status = 301
+  force = true
