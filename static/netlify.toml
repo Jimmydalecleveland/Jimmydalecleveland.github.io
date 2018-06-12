@@ -1,17 +1,23 @@
 [[redirects]]
-  from = "https://jimmydc.netlify.com/*"
+  from = "https://hopeful-spence-6f76a3.netlify.com/*"
   to = "https://www.jimmydc.com/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "http://jimmydc.netlify.com/*"
+  from = "http://hopeful-spence-6f76a3.netlify.com/*"
   to = "https://www.jimmydc.com/:splat"
   status = 301
   force = true
 
 [[redirects]]
   from = "http://www.jimmydc.com/*"
+  to = "https://www.jimmydc.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://jimmydc.com/*"
   to = "https://www.jimmydc.com/:splat"
   status = 301
   force = true
