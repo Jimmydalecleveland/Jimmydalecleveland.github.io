@@ -1,14 +1,14 @@
 import React from 'react';
+import Img from 'gatsby-image';
 import { FaCloudDownload } from 'react-icons/lib/fa';
 
 import resume from './../assets/images/Resume.pdf';
-import profilePic from './../assets/images/profilepic.jpg';
 
-const About = () => (
+const About = ({ profileImg }) => (
   <section id="about">
     <div className="row">
       <div className="three columns">
-        <img className="profile-pic lazyload" data-src={profilePic} alt="" />
+        <Img className="profile-pic" sizes={profileImg.sizes} alt="" />
       </div>
       <div className="nine columns main-col">
         <h2>About Me</h2>

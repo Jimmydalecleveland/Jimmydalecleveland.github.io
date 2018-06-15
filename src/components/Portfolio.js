@@ -1,17 +1,9 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Img from 'gatsby-image';
 import { FaExternalLink, FaTag, FaArrowCircleRight } from 'react-icons/lib/fa';
 
-import ladders from '../assets/images/portfolio/1800.jpg';
-import diamondBack from '../assets/images/portfolio/dbf.jpg';
-import forceUsa from '../assets/images/portfolio/force.jpg';
-import ssg from '../assets/images/portfolio/ssg.jpg';
-import lgl from '../assets/images/portfolio/lgl.jpg';
-import lgx from '../assets/images/portfolio/lgx.jpg';
-import shopifyXsells from '../assets/images/portfolio/shopify.jpg';
-import silkn from '../assets/images/portfolio/silkn.jpg';
-
-const Portfolio = () => (
+const Portfolio = ({ imgData }) => (
   <section id="portfolio">
     <div className="row">
       <div className="twelve columns collapsed">
@@ -28,7 +20,11 @@ const Portfolio = () => (
           <div className="columns portfolio-item">
             <div className="item-wrap">
               <Link to="/shopify-cross-sells-app">
-                <img alt="" className="lazyload" data-src={shopifyXsells} />
+                <Img
+                  className="project-img"
+                  sizes={imgData.shopifyXsells.sizes}
+                  alt=""
+                />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
                     <h5>Shopify Cross-sells app for LGL</h5>
@@ -49,7 +45,11 @@ const Portfolio = () => (
                 target="_blank"
                 rel="noopener"
               >
-                <img alt="" className="lazyload" data-src={ladders} />
+                <Img
+                  className="project-img"
+                  sizes={imgData.ladders.sizes}
+                  alt=""
+                />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
                     <h5>1800Ladders</h5>
@@ -70,7 +70,11 @@ const Portfolio = () => (
                 target="_blank"
                 rel="noopener"
               >
-                <img alt="" className="lazyload" data-src={forceUsa} />
+                <Img
+                  className="project-img"
+                  sizes={imgData.forceUsa.sizes}
+                  alt=""
+                />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
                     <h5>Force USA</h5>
@@ -91,7 +95,11 @@ const Portfolio = () => (
                 target="_blank"
                 rel="noopener"
               >
-                <img alt="" className="lazyload" data-src={diamondBack} />
+                <Img
+                  className="project-img"
+                  sizes={imgData.diamondBack.sizes}
+                  alt=""
+                />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
                     <h5>DiamondBack Fitness</h5>
@@ -112,7 +120,7 @@ const Portfolio = () => (
                 target="_blank"
                 rel="noopener"
               >
-                <img alt="" className="lazyload" data-src={ssg} />
+                <Img className="project-img" sizes={imgData.ssg.sizes} alt="" />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
                     <h5>Johnsonville &ndash; Sizzling Sausage Grill</h5>
@@ -133,7 +141,7 @@ const Portfolio = () => (
                 target="_blank"
                 rel="noopener"
               >
-                <img alt="" className="lazyload" data-src={lgl} />
+                <Img className="project-img" sizes={imgData.lgl.sizes} alt="" />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
                     <h5>Little Giant Ladder</h5>
@@ -157,7 +165,7 @@ const Portfolio = () => (
                 target="_blank"
                 rel="noopener"
               >
-                <img alt="" className="lazyload" data-src={lgx} />
+                <Img className="project-img" sizes={imgData.lgx.sizes} alt="" />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
                     <h5>Little Giant Xtreme</h5>
@@ -174,7 +182,11 @@ const Portfolio = () => (
           <div className="columns portfolio-item">
             <div className="item-wrap">
               <Link to="/silkn">
-                <img alt="" className="lazyload" data-src={silkn} />
+                <Img
+                  className="project-img"
+                  sizes={imgData.silkn.sizes}
+                  alt=""
+                />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
                     <h5>Silk'n (no longer live)</h5>
