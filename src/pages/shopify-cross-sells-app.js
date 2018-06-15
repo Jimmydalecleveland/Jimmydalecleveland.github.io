@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
+import Img from 'gatsby-image';
 import Footer from '../components/Footer';
 
-import introImage from './../assets/images/portfolio/shopify-intro.jpg';
 import {
   productActions,
   productsReducer,
@@ -38,7 +38,11 @@ class Project extends Component {
                 <span className="tag">Shopify Authentication</span>
                 <span className="tag">Shopify Metafields API fetching</span>
               </h2>
-              <img src={introImage} alt="" />
+              <Img
+                className="project-img"
+                sizes={this.props.data.adminPanel.sizes}
+                alt=""
+              />
               <p>
                 When the Shopify port of{' '}
                 <a href="https://www.littlegiantladder.com/">
@@ -249,5 +253,15 @@ class Project extends Component {
     );
   }
 }
+
+export const pageQuery = graphql`
+  query shopifyXSellQuery {
+    adminPanel: imageSharp(id: { regex: "/shopify-intro.jpg/" }) {
+      sizes(maxWidth: 980) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+`;
 
 export default Project;
