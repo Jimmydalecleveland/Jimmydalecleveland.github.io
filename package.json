@@ -5,6 +5,7 @@
   "author": "Jimmy Cleveland",
   "dependencies": {
     "gatsby": "^1.9.261",
+    "gatsby-image": "^1.0.53",
     "gatsby-link": "^1.6.32",
     "gatsby-plugin-google-analytics": "^1.0.12",
     "gatsby-plugin-google-fonts": "0.0.3",

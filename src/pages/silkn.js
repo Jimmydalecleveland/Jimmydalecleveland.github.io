@@ -1,14 +1,7 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
+import Img from 'gatsby-image';
 import Footer from '../components/Footer';
-
-import homeResponsive from './../assets/images/portfolio/silkn-home-responsive.png';
-import revitTop from './../assets/images/portfolio/silkn-revit.jpg';
-import pediTop from './../assets/images/portfolio/silkn-pedi.jpg';
-import titanTop from './../assets/images/portfolio/silkn-titan.jpg';
-import flashResponsive from './../assets/images/portfolio/silkn-flash-responsive.png';
-import facefxTop from './../assets/images/portfolio/silkn-facefx.jpg';
-import checkout from './../assets/images/portfolio/silkn-checkout.jpg';
 
 import './../assets/css/project.css';
 import './../vendor/prism.js';
@@ -52,7 +45,11 @@ class Project extends Component {
                     rapidly increasing mobile traffic. Mobile user percentage
                     was as high as 65% at one point after the redesign.
                   </p>
-                  <img className="lazyload" data-src={homeResponsive} alt="" />
+                  <Img
+                    className="project-img"
+                    sizes={this.props.data.silknHome.sizes}
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -77,20 +74,44 @@ class Project extends Component {
                 our claims, and eventually convinced the client, which resulted
                 in a more profitable page that everyone was happy with.
               </p>
-              <img className="lazyload" data-src={flashResponsive} alt="" />
+              <Img
+                className="project-img"
+                sizes={this.props.data.silknFlash.sizes}
+                alt=""
+              />
               <h3>FaceFX landing page</h3>
-              <img className="lazyload" data-src={facefxTop} alt="" />
+              <Img
+                className="project-img"
+                sizes={this.props.data.silknFacefx.sizes}
+                alt=""
+              />
               <h3>
                 Checkout - I had to build a new responsive cart &amp; checkout
                 for this site
               </h3>
-              <img className="lazyload" data-src={checkout} alt="" />
+              <Img
+                className="project-img"
+                sizes={this.props.data.silknCheckout.sizes}
+                alt=""
+              />
               <h3>Pedi Pro landing page</h3>
-              <img className="lazyload" data-src={pediTop} alt="" />
+              <Img
+                className="project-img"
+                sizes={this.props.data.silknPedi.sizes}
+                alt=""
+              />
               <h3>ReVit landing page</h3>
-              <img className="lazyload" data-src={revitTop} alt="" />
+              <Img
+                className="project-img"
+                sizes={this.props.data.silknRevit.sizes}
+                alt=""
+              />
               <h3>Titan landing page</h3>
-              <img className="lazyload" data-src={titanTop} alt="" />
+              <Img
+                className="project-img"
+                sizes={this.props.data.silknTitan.sizes}
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -98,5 +119,45 @@ class Project extends Component {
     );
   }
 }
+
+export const pageQuery = graphql`
+  query SilknImagesQuery {
+    silknHome: imageSharp(id: { regex: "/silkn-home-responsive.png/" }) {
+      sizes(maxWidth: 980) {
+        ...GatsbyImageSharpSizes_tracedSVG
+      }
+    }
+    silknRevit: imageSharp(id: { regex: "/silkn-revit.jpg/" }) {
+      sizes(maxWidth: 980) {
+        ...GatsbyImageSharpSizes_tracedSVG
+      }
+    }
+    silknPedi: imageSharp(id: { regex: "/silkn-pedi.jpg/" }) {
+      sizes(maxWidth: 980) {
+        ...GatsbyImageSharpSizes_tracedSVG
+      }
+    }
+    silknTitan: imageSharp(id: { regex: "/silkn-titan.jpg/" }) {
+      sizes(maxWidth: 980) {
+        ...GatsbyImageSharpSizes_tracedSVG
+      }
+    }
+    silknFlash: imageSharp(id: { regex: "/silkn-flash-responsive.png/" }) {
+      sizes(maxWidth: 980) {
+        ...GatsbyImageSharpSizes_tracedSVG
+      }
+    }
+    silknFacefx: imageSharp(id: { regex: "/silkn-facefx.jpg/" }) {
+      sizes(maxWidth: 980) {
+        ...GatsbyImageSharpSizes_tracedSVG
+      }
+    }
+    silknCheckout: imageSharp(id: { regex: "/silkn-checkout.jpg/" }) {
+      sizes(maxWidth: 980) {
+        ...GatsbyImageSharpSizes_tracedSVG
+      }
+    }
+  }
+`;
 
 export default Project;
