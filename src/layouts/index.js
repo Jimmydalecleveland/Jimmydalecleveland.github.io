@@ -4,7 +4,6 @@ import Helmet from 'react-helmet';
 import { siteMetadata } from '../../gatsby-config';
 import favicon from './../assets/favicon.ico';
 import unfurl from './../assets/images/jimmydc_unfurl.jpg';
-import lazySizes from 'lazysizes';
 
 const TemplateWrapper = ({ children }) => (
   <div>
