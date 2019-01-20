@@ -35,7 +35,7 @@ const Skills = () => (
           </li>
           <li>
             <span className="bar-expand foundation-bootstrap" />
-            <em>Zurb Foundation / Bootstrap</em>
+            <em>Responsive Design and Development</em>
           </li>
           <li>
             <span className="bar-expand nodejs" />
