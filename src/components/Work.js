@@ -11,11 +11,24 @@ const Work = () => (
     <div className="nine columns main-col">
       <div className="row item">
         <div className="twelve columns">
+          <h3>Clearlink</h3>
+          <p className="info">
+            Software Engineer
+            <span>&bull;</span>
+            <em className="date">Jul 2018 &ndash; Present</em>
+          </p>
+
+          <p>I work on the CMS team within Marketing Technologies department, building the system that content editors and frontend developers will use to create and update consumer facing websites. The current tech-stack we are using consists of: React, Gatsby, Gutenberg, Golang, Lerna for the Monorepo, Jest for testing, and Docz for the living styleguide.</p>
+        </div>
+      </div>
+
+      <div className="row item">
+        <div className="twelve columns">
           <h3>Net Media Group</h3>
           <p className="info">
             Frontend Web Developer
             <span>&bull;</span>
-            <em className="date">Dec 2013 - Present</em>
+            <em className="date">Dec 2013 - May 2018</em>
           </p>
 
           <p>
